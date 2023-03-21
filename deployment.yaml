@@ -14,6 +14,6 @@ settings:
   enable_challenger_models: true 
   segment_analysis:
     enabled: true 
-    attritbutes:
+    attributes:
       - Host-IP
       - Remote-IP
