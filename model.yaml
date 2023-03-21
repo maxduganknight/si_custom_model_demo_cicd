@@ -3,6 +3,7 @@ target_type: Regression
 settings:
   name: My Awesome GitHub Model 1 [GitHub CI/CD]
   target_name: Grade 2014
+  training_dataset_id: 641a0c89192c5756e4e2e99f
 
 version:
   # Make sure this is the environment ID is in your system.
