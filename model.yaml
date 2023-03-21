@@ -27,7 +27,7 @@ test:
       enabled: true
       match_threshold: 0.9
       output_dataset_id: 641a0c89192c5756e4e2e99f
-      passing_match_rate: 0.85
+      passing_match_rate: 85
       predictions_column: Grade 2014
     side_effects:
       block_deployment_if_fails: true
