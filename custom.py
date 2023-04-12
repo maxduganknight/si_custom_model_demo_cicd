@@ -50,7 +50,7 @@ def score(data, model, **kwargs):
         s_model = load_seg_model(s)
 
         # Make predictions using the segment-specific model
-        pred = pd.DataFrame(s_model.predict_proba(seg_data.drop(['is_bad','seg','row_id'],axis=1)), columns=["0", "1"])
+        pred = pd.DataFrame(s_model.predict_proba(seg_data.drop(['seg','row_id'],axis=1)), columns=["0", "1"])
 
         # Combine predictions with segment-specific data
         seg_scored = pd.concat([seg_data['row_id'].reset_index(drop=True), pred], axis=1)
