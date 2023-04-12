@@ -1,9 +1,9 @@
 user_provided_model_id: datarobot/max.dugan-knight/model-unique-id-1
-target_type: Regression
+target_type: Binary
 settings:
-  name: My Awesome GitHub Model 1 [GitHub CI/CD]
-  target_name: Grade 2014
-  training_dataset_id: 641a0c89192c5756e4e2e99f
+  name: HomeGenius Custom Model
+  target_name: is_bad
+  training_dataset_id: 6435f72e9304e78d62b27e3d
 
 version:
   # Make sure this is the environment ID is in your system.
@@ -12,7 +12,7 @@ version:
 
 test:
   skip: false
-  test_data_id: 641a0c89192c5756e4e2e99f
+  test_data_id: 6435f72e9304e78d62b27e3d
   checks: 
     null_value_imputation:
       block_deployment_if_fails: true
@@ -29,7 +29,7 @@ test:
       match_threshold: 0.9
       output_dataset_id: 641a0c89192c5756e4e2e99f
       passing_match_rate: 85
-      predictions_column: Grade 2014
+      predictions_column: is_bad
     side_effects:
       block_deployment_if_fails: true
       enabled: true

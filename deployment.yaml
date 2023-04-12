@@ -2,11 +2,11 @@ user_provided_deployment_id: datarobot/max.dugan-knight/my-awesome-deployment-id
 user_provided_model_id: datarobot/max.dugan-knight/model-unique-id-1
 prediction_environment_name: https://cfds-ccm-prod.orm.datarobot.com
 settings:
-  label: "My Updated Deployment - Grade 2014"
+  label: "HomeGenius Demo Deployment"
   description: "more detailed description"
   importance: LOW
   association:
-    association_id_column: association_id
+    association_id_column: 
     required_in_pred_request: false
   enable_target_drift: true
   enable_feature_drift: true 
