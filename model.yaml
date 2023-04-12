@@ -2,7 +2,7 @@ user_provided_model_id: datarobot/max.dugan-knight/homegenius
 target_type: Binary
 settings:
   name: HomeGenius Custom Model
-  target_name: '1'
+  target_name: 'is_bad'
   training_dataset_id: 6435f72e9304e78d62b27e3d
   positive_class_label: '1'
   negative_class_label: '0'
