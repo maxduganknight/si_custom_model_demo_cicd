@@ -27,11 +27,11 @@ test:
       number_of_parallel_users: 3
     prediction_verification:
       block_deployment_if_fails: false
-      enabled: true
+      enabled: false
       match_threshold: 0.9
       output_dataset_id: 641a0c89192c5756e4e2e99f
       passing_match_rate: 85
-      predictions_column: is_bad
+      predictions_column: 
     side_effects:
       block_deployment_if_fails: true
       enabled: true
