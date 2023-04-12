@@ -1,4 +1,4 @@
-user_provided_model_id: datarobot/max.dugan-knight/model-unique-id-1
+user_provided_model_id: datarobot/max.dugan-knight/homegenius
 target_type: Binary
 settings:
   name: HomeGenius Custom Model

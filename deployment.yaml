@@ -1,5 +1,5 @@
-user_provided_deployment_id: datarobot/max.dugan-knight/my-awesome-deployment-id
-user_provided_model_id: datarobot/max.dugan-knight/model-unique-id-1
+user_provided_deployment_id: datarobot/max.dugan-knight/homegenius
+user_provided_model_id: datarobot/max.dugan-knight/homegenius
 prediction_environment_name: https://cfds-ccm-prod.orm.datarobot.com
 settings:
   label: "HomeGenius Demo Deployment"
