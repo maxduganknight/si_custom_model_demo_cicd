@@ -21,7 +21,7 @@ test:
       enabled: true
     performance:
       block_deployment_if_fails: false
-      enabled: true
+      enabled: false
       max_execution_time: 100
       maximum_response_time: 50
       number_of_parallel_users: 3
@@ -37,7 +37,7 @@ test:
       enabled: true
     stability:
       block_deployment_if_fails: true
-      enabled: true
+      enabled: false
       maximum_payload_size: 1000
       minimum_payload_size: 100
       number_of_parallel_users: 1

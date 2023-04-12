@@ -5,17 +5,16 @@ from sklearn.ensemble import RandomForestClassifier
 import io
 import joblib
 
-def read_input_data(input_binary_data):
-    ###Commenting 11 and uncommenting 12 and 13 pushes the error to the model hook...something about binary data
-    data = pd.read_csv(io.BytesIO(input_binary_data))
-    #data_str = io.StringIO(input_binary_data)
-    #data = pd.read_csv(data_str)
-    return data
-
+# def read_input_data(data):
+#     ###Commenting 11 and uncommenting 12 and 13 pushes the error to the model hook...something about binary data
+#     data = pd.read_csv(data)
+#     #data_str = io.StringIO(input_binary_data)
+#     #data = pd.read_csv(data_str)
+#     return data
 
 def load_model(code_dir):
-
     return 1
+
 def load_seg_model(seg):
     if seg == 1:
         with open("model1.pkl", "rb") as f:
@@ -24,25 +23,18 @@ def load_seg_model(seg):
         with open("model2.pkl", "rb") as f:
             model = joblib.load(f)
     return model
-#
-#
-#
-#
+
 def transform(data, model):
-    data['int_rate'] = data['int_rate'].fillna('0%') # Fill null values with 0%
-    data['int_rate'] = data['int_rate'].str.rstrip('%').astype(float) # Convert to float after filling null values
     data = data.fillna(0)
     data['funded_amnt'] = np.where(data['funded_amnt'] > 0, np.log(data['funded_amnt']), 0)
+    data['int_rate'] = data['int_rate'].str.rstrip('%').astype(float)
     data['derivedVar'] = data['funded_amnt'] + data['int_rate']
-    #data = data.fillna(0)
     # Apply Segmentation Logic
     data['row_id'] = range(1, len(data) + 1)
     data['seg'] = np.where(data['dti'] < 13, 1, 2)
-    
-
     return data
-#
-def score(data, model,**kwargs):
+
+def score(data, model, **kwargs):
     # Extract unique segment values from data
     segs = data['seg'].unique().tolist()
 
