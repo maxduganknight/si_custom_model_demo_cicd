@@ -4,7 +4,7 @@ prediction_environment_name: https://cfds-ccm-prod.orm.datarobot.com
 settings:
   label: "HomeGenius Demo Deployment"
   description: "more detailed description"
-  # importance: LOW
+  importance: "LOW"
   association:
     association_id_column: 
     required_in_pred_request: false
