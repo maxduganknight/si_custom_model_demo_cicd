@@ -1,19 +1,16 @@
 user_provided_deployment_id: datarobot/max.dugan-knight/homegenius
 user_provided_model_id: datarobot/max.dugan-knight/homegenius
 prediction_environment_name: https://cfds-ccm-prod.orm.datarobot.com
-# settings:
-#   label: "HomeGenius Demo Deployment"
-#   description: "more detailed description"
-#   importance: "LOW"
-#   association:
-#     association_id_column: 
-#     required_in_pred_request: false
-  # enable_target_drift: true
-  # enable_feature_drift: true 
-  # enable_predictions_collection: true 
-  # enable_challenger_models: true 
-  # segment_analysis:
-  #   enabled: true 
+settings:
+  label: "HomeGenius Demo Deployment"
+  description: "more detailed description"
+  importance: "LOW"
+  enable_target_drift: true
+  enable_feature_drift: true 
+  enable_predictions_collection: true 
+  enable_challenger_models: false 
+  segment_analysis:
+    enabled: false 
     # attributes:
     #   - Host-IP
     #   - Remote-IP
