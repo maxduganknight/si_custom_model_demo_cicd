@@ -4,6 +4,8 @@ settings:
   name: HomeGenius Custom Model
   target_name: is_bad
   training_dataset_id: 6435f72e9304e78d62b27e3d
+  positive_class_label: 1
+  negative_class_label: 0
 
 version:
   # Make sure this is the environment ID is in your system.
